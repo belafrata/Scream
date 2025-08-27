@@ -96,24 +96,39 @@ header {
 }
 
 .conteudo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    position: relative;
     width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--red1);
+    overflow: hidden;
 }
 
-.conteudo .imagem img {
-    width: 400px;
-    height: auto;
-    border-radius: 30px;
+.conteudo img {
+    width: 100%;
+    display: block;
+}
+
+.texto {
+    position: absolute;
+    color: white;
+    top: 25%;
+    left: 60px;
+    transform: translateY(-30%);
+    max-width: 800px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.texto h2 {
+    margin-bottom: 20px;
 }
 
 .lista-filme-container {
     padding: 0 20px;
-    background: linear-gradient(var(--red1), white);
+    margin-top: -150px;
+}
+
+.lista-filme-container h1 {
+    margin-left: 30px;
+    margin-bottom: -30px;
 }
 
 .lista-filme-wrapper {
@@ -139,7 +154,7 @@ header {
 }
 
 .lista-filme-img {
-    width: 270px;
+    width: 330px;
     transition: all 0.5s ease-in-out;
     border-radius: 15px;
 }
@@ -152,4 +167,77 @@ header {
     right: 0;
     opacity: .8;
     cursor: pointer;
+}
+
+.area-quiz {
+    background: blue;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 30px;
+}
+
+.area-quiz h1 {
+    font-weight: 25px;
+    color: white;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.area-quiz h2 {
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+
+.btn {
+    background: white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background-color: black;
+    color: white;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+.proximo {
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correto {
+    background: green;
+}
+
+.meio-correto {
+    background: yellow;
+}
+
+.incorreto {
+    background: red;
 }
