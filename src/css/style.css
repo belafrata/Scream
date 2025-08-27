@@ -1,0 +1,155 @@
+:root {
+    --red1: #C50000;
+    --red2: #590000;
+    --gray1: #4d4d4d;
+    --gray2: #acacac;
+    --white1: #f6f6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    background-color: var(--red1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.busca {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 28px;
+    background: var(--white1);
+}
+
+.busca input {
+    font-size: 16px;
+    color: black;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 500px;
+}
+
+.busca i {
+    color: var(--gray1);
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu ul li a:hover {
+    color: var(--red2);
+}
+
+.menu i {
+    font-size: 25px;
+}
+
+.trilho {
+    width: 40px;
+    height: 20px;
+    background-color: var(--gray2);
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(.9);
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--red1);
+}
+
+.conteudo .imagem img {
+    width: 400px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.lista-filme-container {
+    padding: 0 20px;
+    background: linear-gradient(var(--red1), white);
+}
+
+.lista-filme-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.lista-filme {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.lista-filme-item {
+    margin-right: 30px;
+}
+
+.lista-filme-item:hover .lista-filme-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+}
+
+.lista-filme-img {
+    width: 270px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 15px;
+}
+
+.arrow {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 130px; 
+    right: 0;
+    opacity: .8;
+    cursor: pointer;
+}
