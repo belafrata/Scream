@@ -24,12 +24,12 @@ arrow.forEach((arrow, i) => {
 
 const perguntas = [
     {
-        pergunta: "Você está em casa e o telefone toca. Uma voz mascarada começa a fazer perguntas bizarras e ameaçadoras. O que você faz?",
+        pergunta: "Você está sozinho(a) em casa e o telefone toca. A voz do outro lado é estranha e pergunta seu filme de terror favorito. O que você faz?",
         respostas: [
-            { id: 1, text: "Tenta conversar para ganhar tempo.", correct:1},
-            { id: 2, text: "Desliga e vai atrás de armas.", correct:0},
-            { id: 3, text: "Desliga imediatamente e chama a polícia.", correct:2},
-            { id: 4, text: "Ignora e acha que é brincadeira.", correct:0},
+            { id: 1, text: "Brinco e respondo numa boa, vai que é trote.", correct:1},
+            { id: 2, text: "Ignoro e continuo assistindo TV.", correct:0},
+            { id: 3, text: "Desligo o telefone, fecho portas e chamo a polícia.", correct:2},
+            { id: 4, text: "Respondo 'não gosto de terror' e saio pra caminhar.", correct:0},
         ]
     },
     {
@@ -38,16 +38,34 @@ const perguntas = [
             { id: 1, text: "Encaro a situação com coragem e vou atrás do culpado.", correct:0},
             { id: 2, text: "Procuro a saída mais próxima em silêncio.", correct:2},
             { id: 3, text: "Fico parado, assustado.", correct:0},
-            { id: 4, text: "Tento juntar um grupo para se proteger.", correct:1},
+            { id: 4, text: "Procuro meus amigos e sugiro irmos embora.", correct:1},
         ]
     },
     {
-        pergunta: "Alguém está te seguindo até sua casa à noite e você percebe que está com o celular sem bateria. O que você faz?",
+        pergunta: "Ghostface aparece na sua frente com uma faca. Qual a melhor reação?",
         respostas: [
-            { id: 1, text: "Tento encontrar um lugar seguro na vizinhança.", correct:1},
-            { id: 2, text: "Chamo ajuda gritando.", correct:0},
-            { id: 3, text: "Enfrento o perseguidor.", correct:0},
-            { id: 4, text: "Corro para dentro e tranco todas as portas.", correct:2},
+            { id: 1, text: "Tento bater de frente, com o que tiver na mão.", correct:1},
+            { id: 2, text: "Fico paralisado de medo.", correct:0},
+            { id: 3, text: "Pergunto o que ele quer.", correct:0},
+            { id: 4, text: "Corro o mais rápido que puder.", correct:2},
+        ]
+    },
+    {
+        pergunta: "O assassino diz que vai poupar sua vida se você entregar um amigo. O que você faz?",
+        respostas: [
+            { id: 1, text: "Tento enganar o assassino pra ganhar tempo.", correct:2},
+            { id: 2, text: "Entrego na hora, quero viver.", correct:0},
+            { id: 3, text: "Me sacrifico pra salvar o outro.", correct:1},
+            { id: 4, text: "Entro em pânico e fico mudo.", correct:0},
+        ]
+    },
+    {
+        pergunta: "Você escapa do assassino, mas ele está desacordado no chão. O que faz?",
+        respostas: [
+            { id: 2, text: "Dou as costas e corro pra pedir ajuda.", correct:0},
+            { id: 3, text: "Grito “tá morto!” e abraço meus amigos.", correct:0},
+            { id: 4, text: "Confisco a arma dele e fico atento.", correct:2},
+            { id: 1, text: "Chuto mais umas 3 vezes só pra garantir.", correct:1},
         ]
     },
 ]
@@ -118,12 +136,12 @@ function mostrarPontuacao() {
     resetState();
     let resultadoTexto = "";
 
-    if (pontuacao === perguntas.length * 2) {
-        resultadoTexto = "Parabéns! Você não seria uma vítima!";
-    } else if (pontuacao >= 2 && pontuacao < perguntas.length * 2) {
-        resultadoTexto = "Cuidado! Talvez você fosse uma vítima…";
+    if (pontuacao >= 8) {
+        resultadoTexto = "Você vai pro próximo filme!";
+    } else if (pontuacao >= 5) {
+        resultadoTexto = "Você está meio machucado, né?";
     } else {
-        resultadoTexto = "Infelizmente, você seria a próxima vítima!";
+        resultadoTexto = "Você foi a primeira cena do filme...";
     }
 
     perguntaElemento.innerHTML = resultadoTexto;

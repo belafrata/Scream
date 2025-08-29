@@ -184,7 +184,7 @@ header {
     max-width: 600px;
     margin: 100px auto 200px;
     padding: 30px;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .area-quiz h1 {
@@ -196,18 +196,21 @@ header {
 
 .quiz {
     padding: 20px 0;
+    
 }
 
 .area-quiz h2 {
-    font-size: 20px;
+    font-size: 23px;
     color: white;
     font-weight: 20px;
+    margin-bottom: 20px;
 }
 
 .btn {
     background: white;
     color: black;
     font-weight: 500;
+    font-size: 17px;
     width: 100%;
     border: 1px solid black;
     padding: 10px;
